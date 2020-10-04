@@ -1,0 +1,176 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-header {
+  position: absolute;
+  top: 5rem;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 0px 3px 10px #000;
+  z-index: 4;
+}
+.default {
+  width: 0;
+}
+.greenSide {
+  position: absolute;
+  background: #68ab68;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -2;
+}
+.redSide {
+  position: absolute;
+  background: #d65b5b;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -2;
+}
+.isFibonacci {
+  width: 100%;
+  z-index: 1;
+}
+.isNotFibonacci {
+  width: 100%;
+  z-index: 1;
+}
+.shrinked {
+  width: 0%;
+}
+.form-container {
+  width: 35rem;
+  margin: 0 0.5rem;
+  z-index: 2;
+  background: #f2f2f2;
+  padding: calc(3rem - 2vw);
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.4);
+}
+.allowed-input {
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+.wrong-input {
+  color: rgb(240, 26, 26);
+}
+.form-container input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+input:focus {
+  outline: none;
+}
+.input-holder {
+  position: relative;
+}
+.input-holder .clear-input-btn {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.form-container .check-btn {
+  display: block;
+  margin: 0 auto;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  background: #262626;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+input.validReg {
+  border: 1px solid rgb(119, 179, 95);
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(119, 179, 95, 1);
+  -moz-box-shadow: 0px 0px 8px 3px rgba(119, 179, 95, 1);
+  box-shadow: 0px 0px 8px 3px rgba(119, 179, 95, 1);
+  color: rgb(119, 179, 95);
+}
+input.invalidReg {
+  border: 1px solid rgb(240, 26, 26);
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(240, 26, 26, 1);
+  -moz-box-shadow: 0px 0px 8px 3px rgba(240, 26, 26, 1);
+  box-shadow: 0px 0px 8px 3px rgba(240, 26, 26, 1);
+  color: rgb(240, 26, 26);
+}
+.info-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.info-btn:hover img {
+  transform: scale(1.1);
+}
+.info-btn img {
+  transition: 0.2s;
+  width: 3.5rem;
+}
+
+.info-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #161515;
+  z-index: 4;
+  position: absolute;
+}
+.text-holder {
+  max-width: 35rem;
+
+  margin: 0.5rem auto;
+}
+.info-screen h1,
+h3,
+.examples {
+  color: #fff;
+  line-height: 1.7rem;
+}
+.underline {
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+.sequence {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.created-by {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #fff;
+}
