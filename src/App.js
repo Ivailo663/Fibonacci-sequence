@@ -96,7 +96,11 @@ function App() {
       {manageBackground()}
       <div className="form-container">
         {manageSuccessMsg()}
-        <p className={`allowed-input ${!isRegValid ? "wrong-input" : ""}`}>
+        <p
+          className={`allowed-input ${
+            sequence ? (!isRegValid ? "wrong-input" : "") : ""
+          }`}
+        >
           Only comma separated numbers allowed!
         </p>
         <Input
