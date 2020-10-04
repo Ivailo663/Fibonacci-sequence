@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   const regex = new RegExp("^[0-9]+(,[1-9]+)*$");
   const [sequence, setSequence] = useState("");
-  const [isRegValid, setIsRegValid] = useState(true);
+  const [isRegValid, setIsRegValid] = useState(false);
   const [isFibonacci, setIsFibonacci] = useState(false);
   const [isCheckClicked, setIsCheckClicked] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
@@ -112,6 +112,7 @@ function App() {
         <Button
           isRegValid={isRegValid}
           checkSequence={() => fibonacciCheck()}
+          sequence={sequence}
         />
       </div>
       {}
