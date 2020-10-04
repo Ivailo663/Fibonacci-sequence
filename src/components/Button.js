@@ -4,7 +4,7 @@ function Button(props) {
   return (
     <button
       className={`check-btn ${props.isRegValid ? "" : "not-allowed"}`}
-      onClick={props.checkSequence}
+      onClick={props.isRegVaild ? props.checkSequence : ""}
     >
       Check
     </button>

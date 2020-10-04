@@ -110,6 +110,11 @@ input:focus {
   color: #fff;
   font-size: 1.3rem;
   cursor: pointer;
+  outline: none;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
 }
 input.validReg {
   border: none;
