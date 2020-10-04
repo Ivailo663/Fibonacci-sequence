@@ -20,7 +20,6 @@ function App() {
     if (!event.target.value) {
       setIsCheckClicked(false);
     }
-    console.log(event.target.value);
   };
 
   const loopCollection = (arr) => {
