@@ -72,18 +72,20 @@ function App() {
     setIsInfoOpen(!isInfoOpen);
   };
   const manageBackground = () => {
-    <>
-      <div
-        className={`greenSide ${
-          isCheckClicked ? (isFibonacci ? "isFibonacci" : "shrinked") : ""
-        }`}
-      ></div>
-      <div
-        className={`redSide ${
-          isCheckClicked ? (!isFibonacci ? "isNotFibonacci" : "shrinked") : ""
-        }`}
-      ></div>
-    </>;
+    return (
+      <>
+        <div
+          className={`greenSide ${
+            isCheckClicked ? (isFibonacci ? "isFibonacci" : "shrinked") : ""
+          }`}
+        ></div>
+        <div
+          className={`redSide ${
+            isCheckClicked ? (!isFibonacci ? "isNotFibonacci" : "shrinked") : ""
+          }`}
+        ></div>
+      </>
+    );
   };
   return (
     <div className="App">
