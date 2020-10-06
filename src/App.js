@@ -7,7 +7,7 @@ import Info from "./components/Info";
 import "./App.css";
 
 function App() {
-  const regex = new RegExp("^[0-9]+(,[1-9]+)*$");
+  const regex = new RegExp("^[0-9]+(,[0-9]+)*$");
   const [sequence, setSequence] = useState("");
   const [isRegValid, setIsRegValid] = useState(false);
   const [isFibonacci, setIsFibonacci] = useState(false);
