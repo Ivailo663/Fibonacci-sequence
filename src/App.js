@@ -23,17 +23,16 @@ function App() {
   };
 
   const loopCollection = (arr) => {
-    let states = [];
     if (arr.length < 3) {
       setIsFibonacci(false);
     } else {
       for (let i = 0; i < arr.length - 2; i++) {
-        states.push(arr[i + 2] == arr[i] + arr[i + 1]);
-      }
-      if (states.every((el) => el == true)) {
-        setIsFibonacci(true);
-      } else {
-        setIsFibonacci(false);
+        if (arr[i + 2] == arr[i] + arr[i + 1]) {
+          setIsFibonacci(true);
+        } else {
+          setIsFibonacci(false);
+          return;
+        }
       }
     }
   };
@@ -41,10 +40,9 @@ function App() {
     //Creating array of strings from the input
     const rawString = sequence.split(",");
     const arr = [];
-    for (let i = 0; i < rawString.length; i++) {
-      //parsing each element to number
-      arr.push(rawString[i] * 1);
-    }
+    //parsing each element to number
+    rawString.forEach((el) => arr.push(el * 1));
+
     loopCollection(arr);
     setIsCheckClicked(true);
   };
